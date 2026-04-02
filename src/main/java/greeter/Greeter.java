@@ -5,7 +5,7 @@ public class Greeter {
     private GreeterString greeterString;
 
     public Greeter() {
-        this.formality = "Default";
+        this.formality = "default";
         greeterString = GreeterStringFactory.create(formality);
     }
 
@@ -14,7 +14,11 @@ public class Greeter {
     }
 
     public void setFormality(String formality) {
-        this.formality = formality;
-        greeterString = GreeterStringFactory.create(formality);
+        if (formality == null) {
+            this.formality = "";
+        } else {
+            this.formality = formality;
+        }
+        greeterString = GreeterStringFactory.create(this.formality);
     }
 }

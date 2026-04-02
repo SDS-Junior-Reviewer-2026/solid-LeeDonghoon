@@ -32,4 +32,18 @@ public class GreeterTest {
         greeter.setFormality("intimate");
         assertEquals("Hello Darling!", greeter.greet());
     }
+
+    @Test
+    public void testSaysHelloGoHome() {
+        Greeter greeter = new Greeter();
+        greeter.setFormality("goHome");
+        assertEquals("집가고 싶다..", greeter.greet());
+    }
+
+    @Test
+    public void testSaysHelloNull() {
+        Greeter greeter = new Greeter();
+        greeter.setFormality(null);
+        assertEquals("Hello.", greeter.greet());
+    }
 }
