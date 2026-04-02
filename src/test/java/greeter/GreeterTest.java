@@ -3,14 +3,13 @@ package greeter;
 import greeter.Greeter;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class GreeterTest {
     @Test
     public void testSaysHello() {
         Greeter greeter = new Greeter();
         assertEquals("Hello.", greeter.greet());
-    }
-
-    private void assertEquals(String s, String greet) {
     }
 
     @Test
